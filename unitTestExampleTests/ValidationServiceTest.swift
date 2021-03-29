@@ -23,7 +23,7 @@ class ValidationServiceTest: XCTestCase {
     func testIsVaildEmail() throws {
         XCTAssertNoThrow(try validtion.validateEmail("Soda"))
     }
-    func testIsEmailNotNill() throws {
+    func testIsEmailIsNill() throws {
         let expatesError = ValidationError.invalidValue
         var error :ValidationError?
         XCTAssertThrowsError(try validtion.validateEmail(nil)) { throwError in
@@ -59,7 +59,7 @@ class ValidationServiceTest: XCTestCase {
         
         XCTAssertNoThrow(try validtion.validatepassWord("12345689"))
     }
-    func testpasswordIsNotNill() throws {
+    func testpasswordIsIsNill() throws {
         
         let expatesError = ValidationError.invalidValue
         var error : ValidationError?
